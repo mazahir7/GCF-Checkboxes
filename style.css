@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik:wght@400;500;700;800;900&display=swap");
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	/* changes the 1REM from 16px to 10px */
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+h1 {
+	margin-bottom: 3rem;
+	text-align: center;
+}
+
+.checkbox-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+.checkbox-container div {
+	display: flex;
+	gap: 2rem;
+	font-size: 2.4rem;
+	align-items: center;
+}
+
+input {
+	display: none;
+}
+
+.checkbox-container div div label {
+	position: relative;
+	background-color: #999;
+	width: 12rem;
+	height: 4rem;
+	border-radius: 22px;
+}
+
+.checkbox-container div div label .ball {
+	position: absolute;
+	top: 3px;
+	left: 4px;
+	background-color: #fff;
+	height: 3.5rem;
+	width: 3.5rem;
+	border-radius: 50%;
+	transition: all 0.5s ease-in-out;
+}
+
+.checkbox-container div div label.active {
+	background-color: purple;
+}
+
+.checkbox-container div div label.active .ball {
+	transform: translateX(76px);
+}
